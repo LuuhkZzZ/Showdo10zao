@@ -636,15 +636,14 @@ body {
   #question { font-size: 14px; }
   .option { font-size: 12px; padding: 10px; }
   .result-icon { font-size: 56px; }
-  .result-title { font-size: 21px; }
-  .earned-amount { font-size: 30px; }
-  .last-question-modal h3 { font-size: 20px; }
-  .warning-icon { font-size: 46px; }
+.result-title { font-size: 21px; }
+.earned-amount { font-size: 30px; }
+.last-question-modal h3 { font-size: 20px; }
+.warning-icon { font-size: 46px; }
 }
-
 @media (max-width: 360px) {
-  .logo-title { font-size: 24px; }
-  .logo-subtitle { font-size: 36px; }
-  #question { font-size: 13px; }
-  .option { font-size: 11px; padding: 9px; }
+.logo-title { font-size: 24px; }
+.logo-subtitle { font-size: 36px; }
+#question { font-size: 13px; }
+.option { font-size: 11px; padding: 9px; }
 }

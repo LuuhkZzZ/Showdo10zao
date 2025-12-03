@@ -168,6 +168,18 @@ const QUESTIONS = {
   ]
 };
 
+// Sequências globais que persistem entre os jogos
+let globalSequences = {
+  general: [],
+  math: []
+};
+
+// Posições atuais nas sequências globais (persiste entre jogos)
+let globalPositions = {
+  general: new Array(10).fill(0),
+  math: new Array(10).fill(0)
+};
+
 let gameState = {
   currentQuestionIndex: 0,
   earnedMoney: 0,
@@ -176,16 +188,10 @@ let gameState = {
   pendingHelpAction: null,
   currentQuestionData: null,
   currentShuffled: null,
-  selectedTheme: null,
-  questionSequences: [],
-  sequencePositions: []
+  selectedTheme: null
 };
 
-let globalSequences = {
-  general: [],
-  math: []
-};
-
+// Inicializa as sequências globais embaralhadas UMA VEZ quando o site carrega
 function initGlobalSequences() {
   ['general', 'math'].forEach(theme => {
     globalSequences[theme] = QUESTIONS[theme].map(levelQuestions => {
@@ -194,6 +200,7 @@ function initGlobalSequences() {
   });
 }
 
+// Chama apenas uma vez quando o script carrega
 initGlobalSequences();
 
 function initGame() {
@@ -252,9 +259,7 @@ function startGame(theme) {
     pendingHelpAction: null,
     currentQuestionData: null,
     currentShuffled: null,
-    selectedTheme: theme,
-    questionSequences: globalSequences[theme].map(seq => [...seq]),
-    sequencePositions: new Array(10).fill(0)
+    selectedTheme: theme
   };
   
   elements.skipBtn.disabled = false;
@@ -293,12 +298,19 @@ function nextQuestion() {
 
 function prepareQuestion() {
   const level = gameState.currentQuestionIndex;
-  const sequence = gameState.questionSequences[level];
-  const position = gameState.sequencePositions[level];
+  const theme = gameState.selectedTheme;
   
+  // Pega a sequência global para este nível e tema
+  const sequence = globalSequences[theme][level];
+  
+  // Pega a posição atual na sequência global
+  const position = globalPositions[theme][level];
+  
+  // Seleciona a pergunta na posição atual
   gameState.currentQuestionData = sequence[position];
   
-  gameState.sequencePositions[level] = (position + 1) % sequence.length;
+  // Avança a posição global (com wraparound circular)
+  globalPositions[theme][level] = (position + 1) % sequence.length;
 }
 
 function displayQuestion() {

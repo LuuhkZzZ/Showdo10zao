@@ -22,30 +22,40 @@
   </div>
 
   <div id="menu" class="screen active">
-
-  <div class="logo-container">
-    <div class="logo-wrapper">
+    <div class="logo-container">
       <div class="logo-text">
         <div class="logo-title">SHOW DO</div>
         <div class="logo-subtitle">10ZÃO</div>
       </div>
-
+      <p class="subtitle">Teste seus conhecimentos!</p>
     </div>
-
-    <p class="subtitle">Teste seus conhecimentos!</p>
+    <div class="menu-buttons">
+      <button id="startBtn" class="primary-btn">
+        <span>Começar o Jogo</span>
+        <div class="btn-shine"></div>
+      </button>
+      <button id="withdrawBtn" class="secondary-btn">Como Sacar o Dinheiro?</button>
+      <button id="infoBtn" class="secondary-btn">Informações</button>
+    </div>
   </div>
 
-  <div class="menu-buttons">
-    <button id="startBtn" class="primary-btn">
-      <span>Começar o Jogo</span>
-      <div class="btn-shine"></div>
-    </button>
-
-    <button id="withdrawBtn" class="secondary-btn">Como Sacar o Dinheiro?</button>
-    <button id="infoBtn" class="secondary-btn">Informações</button>
+  <div id="themeSelection" class="screen">
+    <div class="logo-container">
+      <h2 style="font-size: 24px; margin-bottom: 10px; color: #e8eaf6;">Escolha o Tema</h2>
+      <p class="subtitle">Selecione a categoria de perguntas</p>
+    </div>
+    <div class="theme-buttons">
+      <button class="theme-btn" data-theme="general">
+        <span class="theme-icon">🌍</span>
+        <span>Conhecimentos Gerais</span>
+      </button>
+      <button class="theme-btn" data-theme="math">
+        <span class="theme-icon">🔢</span>
+        <span>Matemática</span>
+      </button>
+      <button id="backToMenuBtn" class="secondary-btn">Voltar</button>
+    </div>
   </div>
-
-</div>
 
   <div id="quiz" class="screen">
     <div class="quiz-header">
@@ -59,10 +69,10 @@
 
     <div class="helps-container">
       <button id="skipBtn" class="help-btn" title="Pular pergunta">
-        <span class="help-label">Pular</span>
+        <span>Pular</span>
       </button>
       <button id="eliminateBtn" class="help-btn" title="Eliminar 2 alternativas">
-        <span class="help-label">Eliminar</span>
+        <span>Eliminar</span>
       </button>
     </div>
 
@@ -92,59 +102,6 @@
     </div>
   </div>
 
-  <div id="infoModal" class="modal">
-    <div class="modal-content info-modal-content">
-      <h3>Informações do Projeto</h3>
-      
-      <div class="info-section">
-        <p class="info-label">Desenvolvedor:</p>
-        <p class="info-name">Lucas Souza</p>
-      </div>
-      
-      <div class="info-section">
-  <p class="info-label">Membros do Grupo:</p>
-  <div class="team-grid">
-
-    <div class="team-member">
-      <span>Isis Soeiro</span>
-    </div>
-
-    <div class="team-member">
-      <span>João Oliveira</span>
-    </div>
-
-    <div class="team-member">
-      <span>José Martins</span>
-    </div>
-
-    <div class="team-member">
-      <span>Kethelen Barbieri</span>
-    </div>
-
-    <div class="team-member">
-      <span>Lucas Brito</span>
-    </div>
-
-  </div>
-</div>
-      
-      <div class="modal-buttons">
-        <button id="closeInfoBtn" class="secondary-btn">Fechar</button>
-      </div>
-    </div>
-  </div>
-
-  <div id="withdrawModal" class="modal">
-    <div class="modal-content">
-      <h3>Como Sacar o Dinheiro?</h3>
-      <p class="withdraw-joke">Para sacar seus prêmios, basta procurar o <strong>Instrutor Victor</strong> ou a <strong>Instrutora Dinacir</strong>!</p>
-      <p class="withdraw-note">Eles ficarão muito felizes em "processar" seu pagamento!</p>
-      <div class="modal-buttons">
-        <button id="closeWithdrawBtn" class="secondary-btn">Entendi! 😂</button>
-      </div>
-    </div>
-  </div>
-
   <div id="lastQuestionModal" class="modal">
     <div class="modal-content last-question-modal">
       <div class="warning-icon">🔥</div>
@@ -152,10 +109,10 @@
       <p class="warning-text">Parabéns por chegar até aqui! Esta é a pergunta final valendo <strong>R$ 10,00</strong>.</p>
       <div class="warning-box">
         <p class="warning-alert">⚠️ ATENÇÃO!</p>
-        <p>Se você errar, perderá TUDO e sairá com R$ 0,00!</p>
+        <p>Se você errar, perderá TUDO e sairá com <strong>R$ 0,00</strong>!</p>
         <p>As ajudas não estão disponíveis nesta pergunta.</p>
       </div>
-      <p class="good-luck">Boa sorte!</p>
+      <p class="good-luck">Boa sorte! 🍀</p>
       <div class="modal-buttons">
         <button id="continueLastBtn" class="primary-btn">
           <span>Continuar</span>
@@ -165,10 +122,42 @@
     </div>
   </div>
 
+  <div id="infoModal" class="modal">
+    <div class="modal-content">
+      <h3>Informações do Projeto</h3>
+      <div class="info-section">
+        <p class="info-label">Desenvolvedor:</p>
+        <p class="info-name">Lucas Souza</p>
+      </div>
+      <div class="info-section">
+        <p class="info-label">Membros do Grupo:</p>
+        <div class="team-member">Isis Soeiro</div>
+        <div class="team-member">João Oliveira</div>
+        <div class="team-member">José Martins</div>
+        <div class="team-member">Kethelen Barbieri</div>
+        <div class="team-member">Lucas Brito</div>
+      </div>
+      <div class="modal-buttons">
+        <button id="closeInfoBtn" class="secondary-btn">Fechar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="withdrawModal" class="modal">
+    <div class="modal-content">
+      <h3>Como Sacar o Dinheiro?</h3>
+      <p>Para sacar seus prêmios, basta procurar o <strong>Instrutor Victor</strong> ou a <strong>Instrutora Dinacir</strong>!</p>
+      <p style="font-size: 13px; opacity: 0.8; margin-bottom: 0;">Eles ficarão muito felizes em "processar" seu pagamento!</p>
+      <div class="modal-buttons">
+        <button id="closeWithdrawBtn" class="secondary-btn">Entendi! 😂</button>
+      </div>
+    </div>
+  </div>
+
   <div id="end" class="screen">
     <div class="result-container">
       <div class="result-icon" id="resultIcon">🎉</div>
-      <h2 class="result-title">Parabéns!</h2>
+      <h2 class="result-title" id="resultTitle">Parabéns!</h2>
       <div class="earned-display">
         <p class="earned-label">Você conquistou</p>
         <p id="earned" class="earned-amount">R$ 0,00</p>

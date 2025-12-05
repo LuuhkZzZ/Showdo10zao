@@ -84,7 +84,7 @@ const QUESTIONS = {
       { q: "Em 'One Piece', qual é o sonho do Luffy?", a: ["Ser rei dos piratas", "Encontrar ouro", "Derrotar a Marinha", "Viajar o mundo"], c: 0 },
       { q: "Em 'Avatar' (filme), os habitantes de Pandora são os:", a: ["Navi", "Na'vi", "Navií", "Nava"], c: 1 },
       { q: "Capital do Canadá:", a: ["Vancouver", "Toronto", "Ottawa", "Montreal"], c: 2 },
-      { q: "Qual a maior cordilheira do mundo?", a: ["Andes", "Rocosas", "Himalaia", "Alpes"], c: 2 },
+      { q: "Qual é a cordilheira que possui as montanhas de maior altitude do planeta?", a: ["Andes", "Rocosas", "Himalaia", "Alpes"], c: 2 },
       { q: "Antônimo de 'superficial':", a: ["Raso", "Profundo", "Simples", "Vasto"], c: 1 }
     ],
     [
@@ -504,4 +504,5 @@ if (document.readyState === 'loading') {
 } else {
   initGame();
 }
+
 

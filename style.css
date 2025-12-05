@@ -50,6 +50,88 @@ body {
   100% { transform: translateY(-100px) scale(1); }
 }
 
+/* CONFETTI ANIMATION */
+.confetti-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 999;
+  overflow: hidden;
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: -10px;
+  animation: confettiFall 3s linear forwards;
+}
+
+.confetti::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  animation: confettiRotate 1s linear infinite;
+}
+
+@keyframes confettiFall {
+  to {
+    transform: translateY(110vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+@keyframes confettiRotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.confetti.square {
+  border-radius: 2px;
+}
+
+.confetti.circle {
+  border-radius: 50%;
+}
+
+.confetti.triangle {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 10px solid;
+}
+
+.confetti.rectangle {
+  width: 12px;
+  height: 6px;
+  border-radius: 2px;
+}
+
+/* VICTORY GLOW EFFECT */
+.victory-glow {
+  animation: victoryGlow 2s ease-in-out infinite;
+}
+
+@keyframes victoryGlow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.4),
+                0 0 40px rgba(139, 92, 246, 0.3),
+                0 0 60px rgba(139, 92, 246, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.6),
+                0 0 60px rgba(139, 92, 246, 0.5),
+                0 0 90px rgba(139, 92, 246, 0.4);
+  }
+}
+
 .screen {
   display: none;
   text-align: center;
@@ -631,14 +713,15 @@ body {
   #question { font-size: 14px; }
   .option { font-size: 12px; padding: 10px; }
   .result-icon { font-size: 56px; }
-.result-title { font-size: 21px; }
-.earned-amount { font-size: 30px; }
-.last-question-modal h3 { font-size: 20px; }
-.warning-icon { font-size: 46px; }
+  .result-title { font-size: 21px; }
+  .earned-amount { font-size: 30px; }
+  .last-question-modal h3 { font-size: 20px; }
+  .warning-icon { font-size: 46px; }
 }
+
 @media (max-width: 360px) {
-.logo-title { font-size: 24px; }
-.logo-subtitle { font-size: 36px; }
-#question { font-size: 13px; }
-.option { font-size: 11px; padding: 9px; }
+  .logo-title { font-size: 24px; }
+  .logo-subtitle { font-size: 36px; }
+  #question { font-size: 13px; }
+  .option { font-size: 11px; padding: 9px; }
 }

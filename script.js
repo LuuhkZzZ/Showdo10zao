@@ -68,15 +68,15 @@ const QUESTIONS = {
     ],
     [
       { q: "O vilão principal de 'Coringa' (2019) é o próprio Arthur, que trabalha como:", a: ["Professor", "Limpeza", "Comediante", "Garçom"], c: 2 },
-      { q: "O monstrinho amarelo 'Agumon' vem de qual franquia?", a: ["Yu-Gi-Oh", "Digimon", "Pokémon", "Bakugan"], c: 1 },
+      { q: "O monstro amarelo 'Agumon' vem de qual franquia?", a: ["Yu-Gi-Oh", "Digimon", "Pokémon", "Bakugan"], c: 1 },
       { q: "A capital da Suécia é:", a: ["Oslo", "Estocolmo", "Copenhague", "Zurique"], c: 1 },
-      { q: "Substância responsável pela fotossíntese:", a: ["Glicose", "Clorofila", "Sacarose", "Hélio"], c: 1 },
+      { q: "Qual a substância responsável pela fotossíntese?", a: ["Glicose", "Clorofila", "Sacarose", "Hélio"], c: 1 },
       { q: "Ano de criação da ONU:", a: ["1940", "1945", "1950", "1955"], c: 1 }
     ],
     [
       { q: "Qual desses é um jogo 'soulslike'?", a: ["Hades", "Elden Ring", "Overwatch", "Valorant"], c: 1 },
       { q: "A série 'Arcane' é baseada em qual jogo?", a: ["Valorant", "Dota", "League of Legends", "Fortnite"], c: 2 },
-      { q: "Maior país do mundo em área:", a: ["China", "Rússia", "Canadá", "Brasil"], c: 1 },
+      { q: "Qual o maior país do mundo em área?", a: ["China", "Rússia", "Canadá", "Brasil"], c: 1 },
       { q: "Velocidade da rotação da Terra aproximadamente:", a: ["1.600 km/h", "500 km/h", "900 km/h", "3.200 km/h"], c: 0 },
       { q: "A primeira lei de Newton trata de:", a: ["Inércia", "Gravidade", "Ação e reação", "Pressão"], c: 0 }
     ],
@@ -84,14 +84,14 @@ const QUESTIONS = {
       { q: "Em 'One Piece', qual é o sonho do Luffy?", a: ["Ser rei dos piratas", "Encontrar ouro", "Derrotar a Marinha", "Viajar o mundo"], c: 0 },
       { q: "Em 'Avatar' (filme), os habitantes de Pandora são os:", a: ["Navi", "Na'vi", "Navií", "Nava"], c: 1 },
       { q: "Capital do Canadá:", a: ["Vancouver", "Toronto", "Ottawa", "Montreal"], c: 2 },
-      { q: "Maior cordilheira do mundo:", a: ["Andes", "Rocosas", "Himalaia", "Alpes"], c: 2 },
+      { q: "Qual a maior cordilheira do mundo?", a: ["Andes", "Rocosas", "Himalaia", "Alpes"], c: 2 },
       { q: "Antônimo de 'superficial':", a: ["Raso", "Profundo", "Simples", "Vasto"], c: 1 }
     ],
     [
-      { q: "No MCU, quem fundou os Vingadores?", a: ["Hulk", "Thor", "Nick Fury", "Loki"], c: 2 },
+      { q: "No Universo Cinematográfico da Marvel, quem fundou os Vingadores?", a: ["Hulk", "Thor", "Nick Fury", "Loki"], c: 2 },
       { q: "A cantora Shakira nasceu em qual país?", a: ["Chile", "Colômbia", "Espanha", "México"], c: 1 },
-      { q: "Maior país da África:", a: ["Argélia", "Egito", "Sudão", "Nigéria"], c: 0 },
-      { q: "Substância que forma as unhas:", a: ["Cálcio", "Queratina", "Sílica", "Colágeno"], c: 1 },
+      { q: "Qual o maior país da África?", a: ["Argélia", "Egito", "Sudão", "Nigéria"], c: 0 },
+      { q: "Qual a substância que forma as unhas?", a: ["Cálcio", "Queratina", "Sílica", "Colágeno"], c: 1 },
       { q: "A menor unidade da vida é:", a: ["Organelo", "Célula", "Átomo", "Molécula"], c: 1 }
     ]
   ],
@@ -504,3 +504,4 @@ if (document.readyState === 'loading') {
 } else {
   initGame();
 }
+

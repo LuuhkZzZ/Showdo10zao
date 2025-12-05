@@ -24,157 +24,155 @@ const REWARDS = [0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 5, 10];
 const QUESTIONS = {
   general: [
     [
-      { q: "Qual casa Harry Potter estudava?", a: ["Grifinória","Sonserina","Lufa-Lufa","Corvinal"], c: 0 },
-      { q: "Quantos lados tem um triângulo?", a: ["2","3","4","5"], c: 1 },
-      { q: "Qual a cor do céu?", a: ["Verde","Azul","Roxo","Laranja"], c: 1 },
-      { q: "Quantas patas tem um cachorro?", a: ["2","4","6","8"], c: 1 },
-      { q: "Qual desses é uma fruta?", a: ["Batata","Maçã","Cenoura","Alface"], c: 1 }
+      { q: "Em 'Super Mario', qual item faz o personagem crescer?", a: ["Cogumelo", "Flor", "Estrela", "Pena"], c: 0 },
+      { q: "Qual banda canta 'Bohemian Rhapsody'?", a: ["Queen", "Beatles", "Pink Floyd", "Aerosmith"], c: 0 },
+      { q: "Capital da Argentina:", a: ["Montevidéu", "Lima", "Buenos Aires", "Santiago"], c: 2 },
+      { q: "Qual animal é considerado o símbolo da Austrália?", a: ["Canguru", "Panda", "Águia", "Lêmure"], c: 0 },
+      { q: "Qual o planeta conhecido como 'planeta vermelho'?", a: ["Saturno", "Marte", "Júpiter", "Vênus"], c: 1 }
     ],
     [
-      { q: "Vilão de Ultimato?", a: ["Loki","Thanos","Ultron","Kang"], c: 1 },
-      { q: "Qual é Pokémon?", a: ["Yoda","Pikachu","Dobby","Gandalf"], c: 1 },
-      { q: "Qual é Vingador?", a: ["Batman","Iron Man","Flash","Superman"], c: 1 },
-      { q: "Jon Snow aparece em:", a: ["The Witcher","GoT","Vikings","The Crown"], c: 1 },
-      { q: "Quem come espinafre?", a: ["Popeye","Homer","Superman","Bob"], c: 0 }
+      { q: "Quem é o protagonista de 'The Witcher'?", a: ["Geralt", "Ezio", "Link", "Kratos"], c: 0 },
+      { q: "A cantora Billie Eilish é de qual país?", a: ["Reino Unido", "EUA", "Austrália", "Canadá"], c: 1 },
+      { q: "Em qual continente fica o Egito?", a: ["Ásia", "Europa", "África", "Oceania"], c: 2 },
+      { q: "Metal mais utilizado na construção civil:", a: ["Alumínio", "Ferro", "Chumbo", "Níquel"], c: 1 },
+      { q: "Qual a cor principal da bandeira da Itália?", a: ["Azul", "Verde", "Amarelo", "Preto"], c: 1 }
     ],
     [
-      { q: "Criador da Microsoft?", a: ["Jobs","Musk","Bill Gates","Bezos"], c: 2 },
-      { q: "Planeta mais próximo do Sol:", a: ["Terra","Mercúrio","Marte","Vênus"], c: 1 },
-      { q: "Segundos em 1 minuto:", a: ["30","60","90","120"], c: 1 },
-      { q: "Animal mais rápido:", a: ["Leão","Guepardo","Águia","Cavalo"], c: 1 },
-      { q: "Dias da semana:", a: ["5","6","7","8"], c: 2 }
+      { q: "Em Star Wars, o sabre de Luke é de qual cor?", a: ["Vermelho", "Azul", "Roxo", "Amarelo"], c: 1 },
+      { q: "Em qual série aparece a personagem Eleven?", a: ["The Boys", "Stranger Things", "Dark", "Loki"], c: 1 },
+      { q: "Qual destes é um gás nobre?", a: ["Hidrogênio", "Neônio", "Carbono", "Cloro"], c: 1 },
+      { q: "Qual oceano banha o Brasil?", a: ["Índico", "Pacífico", "Atlântico", "Ártico"], c: 2 },
+      { q: "O ser humano tem quantos pulmões?", a: ["1", "2", "3", "4"], c: 1 }
     ],
     [
-      { q: "Onde fica a Torre Eiffel?", a: ["Itália","França","Espanha","Inglaterra"], c: 1 },
-      { q: "Mona Lisa foi pintada por:", a: ["Da Vinci","Picasso","Michelangelo","Van Gogh"], c: 0 },
-      { q: "Maior oceano:", a: ["Atlântico","Pacífico","Índico","Ártico"], c: 1 },
-      { q: "Brasil está em qual continente?", a: ["Ásia","Europa","América","África"], c: 2 },
-      { q: "Jogadores no futebol:", a: ["9","10","11","12"], c: 2 }
+      { q: "Qual jogo popular tem a cidade fictícia 'Los Santos'?", a: ["GTA V", "Cyberpunk", "Watch Dogs", "The Division"], c: 0 },
+      { q: "A série 'Breaking Bad' gira em torno da produção de:", a: ["Vacinas", "Computadores", "Drogas", "Armas"], c: 2 },
+      { q: "Primeiro metal usado pela humanidade:", a: ["Ferro", "Ouro", "Bronze", "Cobre"], c: 3 },
+      { q: "Qual país inventou o sushi?", a: ["China", "Japão", "Coreia", "Tailândia"], c: 1 },
+      { q: "Água congela a:", a: ["0°C", "10°C", "5°C", "2°C"], c: 0 }
     ],
     [
-      { q: "Quem descobriu o Brasil?", a: ["Colombo","Cabral","Magalhães","Vespúcio"], c: 1 },
-      { q: "Maior animal do mundo:", a: ["Tubarão","Baleia Azul","Elefante","Orca"], c: 1 },
-      { q: "Capital do Japão:", a: ["Pequim","Tóquio","Seul","Osaka"], c: 1 },
-      { q: "Gás para respirar:", a: ["CO2","Oxigênio","Hélio","Nitrogênio"], c: 1 },
-      { q: "Menor país do mundo:", a: ["Mônaco","Vaticano","Malta","San Marino"], c: 1 }
+      { q: "O jogo 'The Last of Us' gira em torno de um fungo chamado:", a: ["Cordyceps", "Aurora", "Mycena", "Scarlet"], c: 0 },
+      { q: "Qual desses é um herói da Marvel?", a: ["Flash", "Pantera Negra", "Batman", "Robin"], c: 1 },
+      { q: "Maior deserto quente do mundo:", a: ["Saara", "Gobi", "Atacama", "Mojave"], c: 0 },
+      { q: "Fronteira natural entre França e Espanha:", a: ["Andes", "Himalaia", "Apeninos", "Pirineus"], c: 3 },
+      { q: "Metal precioso muito usado em joias:", a: ["Zinco", "Ouro", "Magnésio", "Silício"], c: 1 }
     ],
     [
-      { q: "Inventor do telefone:", a: ["Edison","Bell","Tesla","Marconi"], c: 1 },
-      { q: "Continentes existem:", a: ["5","6","7","8"], c: 2 },
-      { q: "Ano da chegada à Lua:", a: ["1965","1967","1969","1971"], c: 2 },
-      { q: "Rio mais extenso:", a: ["Nilo","Amazonas","Yangtzé","Mississippi"], c: 1 },
-      { q: "Maior planeta:", a: ["Júpiter","Terra","Marte","Vênus"], c: 0 }
+      { q: "Na franquia 'Pokémon', qual é o tipo do Charizard?", a: ["Água", "Fogo/Voador", "Pedra", "Fogo"], c: 1 },
+      { q: "A música 'Blinding Lights' é do artista:", a: ["The Weeknd", "Drake", "Justin Bieber", "Bruno Mars"], c: 0 },
+      { q: "Qual o planeta com a maior quantidade de luas?", a: ["Terra", "Marte", "Júpiter", "Mercúrio"], c: 2 },
+      { q: "Qual foi a primeira capital do Brasil?", a: ["Rio", "Salvador", "Brasília", "Recife"], c: 1 },
+      { q: "Qual o elemento químico do sal de cozinha?", a: ["NaCl", "H2O", "CO2", "O2"], c: 0 }
     ],
     [
-      { q: "Símbolo do ouro:", a: ["O","Ag","Au","Ni"], c: 2 },
-      { q: "Primeiro homem na Lua:", a: ["Aldrin","Armstrong","Gagarin","Shepard"], c: 1 },
-      { q: "Nome real do Batman:", a: ["Bruce Wayne","Clark Kent","Tony Stark","Peter Parker"], c: 0 },
-      { q: "Planetas do Sistema Solar:", a: ["7","8","9","10"], c: 1 },
-      { q: "Água ferve a:", a: ["80°C","90°C","100°C","110°C"], c: 2 }
+      { q: "O vilão principal de 'Coringa' (2019) é o próprio Arthur, que trabalha como:", a: ["Professor", "Limpeza", "Comediante", "Garçom"], c: 2 },
+      { q: "O monstrinho amarelo 'Agumon' vem de qual franquia?", a: ["Yu-Gi-Oh", "Digimon", "Pokémon", "Bakugan"], c: 1 },
+      { q: "A capital da Suécia é:", a: ["Oslo", "Estocolmo", "Copenhague", "Zurique"], c: 1 },
+      { q: "Substância responsável pela fotossíntese:", a: ["Glicose", "Clorofila", "Sacarose", "Hélio"], c: 1 },
+      { q: "Ano de criação da ONU:", a: ["1940", "1945", "1950", "1955"], c: 1 }
     ],
     [
-      { q: "Velocidade da luz:", a: ["300 mil km/s","150 mil km/s","1 milhão km/s","100 mil km/s"], c: 0 },
-      { q: "Estados do Brasil:", a: ["25","26","27","28"], c: 2 },
-      { q: "Maior deserto:", a: ["Saara","Gobi","Antártica","Kalahari"], c: 2 },
-      { q: "Teoria da Relatividade:", a: ["Tesla","Einstein","Bohr","Curie"], c: 1 },
-      { q: "Fórmula da água:", a: ["CO2","H2O","O2","NaCl"], c: 1 }
+      { q: "Qual desses é um jogo soulslike?", a: ["Hades", "Dark Souls", "Overwatch", "Valorant"], c: 1 },
+      { q: "A série 'Arcane' é baseada em qual jogo?", a: ["Valorant", "Dota", "League of Legends", "Fortnite"], c: 2 },
+      { q: "Maior país do mundo em área:", a: ["China", "Rússia", "Canadá", "Brasil"], c: 1 },
+      { q: "Velocidade da rotação da Terra aprox.:", a: ["1.600 km/h", "500 km/h", "900 km/h", "3.200 km/h"], c: 0 },
+      { q: "Primeira lei de Newton trata de:", a: ["Inércia", "Gravidade", "Ação e reação", "Pressão"], c: 0 }
     ],
     [
-      { q: "Autor de 1984:", a: ["Orwell","Huxley","Bradbury","Dickens"], c: 0 },
-      { q: "Montanha mais alta:", a: ["Everest","K2","Makalu","Kilimanjaro"], c: 0 },
-      { q: "Início da 2ª Guerra:", a: ["1937","1939","1941","1943"], c: 1 },
-      { q: "Capital da Austrália:", a: ["Sydney","Melbourne","Canberra","Brisbane"], c: 2 },
-      { q: "Maior lago:", a: ["Caspio","Superior","Titicaca","Victoria"], c: 0 }
+      { q: "Em 'One Piece', qual é o sonho do Luffy?", a: ["Ser rei dos piratas", "Encontrar ouro", "Derrotar a Marinha", "Viajar o mundo"], c: 0 },
+      { q: "Em 'Avatar' (filme), os habitantes de Pandora são os:", a: ["Navi", "Na'vi", "Navií", "Nava"], c: 1 },
+      { q: "Capital do Canadá:", a: ["Vancouver", "Toronto", "Ottawa", "Montreal"], c: 2 },
+      { q: "Maior cordilheira do mundo:", a: ["Andes", "Rocosas", "Himalaia", "Alpes"], c: 2 },
+      { q: "Antônimo de 'superficial':", a: ["Raso", "Profundo", "Simples", "Vasto"], c: 1 }
     ],
     [
-      { q: "Ossos da mão humana:", a: ["27","28","29","30"], c: 0 },
-      { q: "Elemento mais abundante:", a: ["O2","Hidrogênio","Carbono","Nitrogênio"], c: 1 },
-      { q: "Fundação da Microsoft:", a: ["1973","1975","1977","1979"], c: 1 },
-      { q: "Maior prédio do mundo:", a: ["Eiffel","Empire","Burj Khalifa","One WTC"], c: 2 },
-      { q: "Tipo sanguíneo universal:", a: ["A","B","AB","O−"], c: 3 }
+      { q: "No MCU, quem fundou os Vingadores?", a: ["Hulk", "Thor", "Nick Fury", "Loki"], c: 2 },
+      { q: "A cantora Shakira nasceu em qual país?", a: ["Chile", "Colômbia", "Espanha", "México"], c: 1 },
+      { q: "Maior país da África:", a: ["Argélia", "Egito", "Sudão", "Nigéria"], c: 0 },
+      { q: "Substância que forma as unhas:", a: ["Cálcio", "Queratina", "Sílica", "Colágeno"], c: 1 },
+      { q: "A menor unidade da vida é:", a: ["Organelo", "Célula", "Átomo", "Molécula"], c: 1 }
     ]
   ],
-  math: [
+    math: [
     [
-      { q: "Quanto é 2 + 2?", a: ["3","4","5","6"], c: 1 },
-      { q: "Quanto é 5 - 3?", a: ["1","2","3","4"], c: 1 },
-      { q: "Quanto é 3 × 2?", a: ["5","6","7","8"], c: 1 },
-      { q: "Quanto é 10 ÷ 2?", a: ["3","4","5","6"], c: 2 },
-      { q: "Quanto é 7 + 1?", a: ["6","7","8","9"], c: 2 }
+      { q: "Se um bolo é dividido em 8 partes e você come 2, quanto sobra?", a: ["4", "5", "6", "7"], c: 2 },
+      { q: "Qual número completa a sequência: 2, 4, 8, 16, ...?", a: ["18", "20", "24", "32"], c: 3 },
+      { q: "Dobro de 7 é:", a: ["10", "12", "14", "16"], c: 2 },
+      { q: "Qual é o menor número primo?", a: ["1", "2", "3", "5"], c: 1 },
+      { q: "Se 1 hora tem 60 min, 3 horas têm:", a: ["100", "120", "150", "180"], c: 3 }
     ],
     [
-      { q: "Quanto é 15 + 8?", a: ["21","22","23","24"], c: 2 },
-      { q: "Quanto é 20 - 7?", a: ["11","12","13","14"], c: 2 },
-      { q: "Quanto é 6 × 4?", a: ["22","23","24","25"], c: 2 },
-      { q: "Quanto é 18 ÷ 3?", a: ["4","5","6","7"], c: 2 },
-      { q: "Quanto é 9 × 5?", a: ["40","43","45","48"], c: 2 }
+      { q: "Quanto é 15% de 200?", a: ["25", "30", "35", "40"], c: 1 },
+      { q: "Qual número completa a sequência: 5, 10, 20, 40, ...?", a: ["50", "70", "80", "100"], c: 2 },
+      { q: "Raiz quadrada de 49:", a: ["5", "6", "7", "8"], c: 2 },
+      { q: "Se 3 caixas têm 18 maçãs, quantas têm 1 caixa?", a: ["4", "5", "6", "9"], c: 2 },
+      { q: "Qual é maior?", a: ["1/2", "3/4", "1/3", "2/5"], c: 1 }
     ],
     [
-      { q: "Quanto é 45 + 37?", a: ["80","81","82","83"], c: 2 },
-      { q: "Quanto é 100 - 47?", a: ["51","52","53","54"], c: 2 },
-      { q: "Quanto é 12 × 8?", a: ["94","95","96","97"], c: 2 },
-      { q: "Quanto é 144 ÷ 12?", a: ["10","11","12","13"], c: 2 },
-      { q: "Quanto é 25% de 200?", a: ["40","45","50","55"], c: 2 }
+      { q: "Qual número completa a sequência: 9, 12, 15, 18, ...?", a: ["19", "20", "21", "22"], c: 2 },
+      { q: "40% de 250:", a: ["80", "90", "95", "100"], c: 1 },
+      { q: "Raiz quadrada de 121:", a: ["9", "10", "11", "12"], c: 2 },
+      { q: "Se 1 lápis custa 3 reais, 7 custam:", a: ["18", "19", "20", "21"], c: 3 },
+      { q: "Qual é o valor de |−15|?", a: ["10", "12", "15", "18"], c: 2 }
     ],
     [
-      { q: "Quanto é 7² (7 ao quadrado)?", a: ["42","45","49","52"], c: 2 },
-      { q: "Raiz quadrada de 64:", a: ["6","7","8","9"], c: 2 },
-      { q: "Quanto é 15 × 15?", a: ["220","225","230","235"], c: 1 },
-      { q: "Quanto é 250 ÷ 5?", a: ["45","48","50","52"], c: 2 },
-      { q: "30% de 150:", a: ["40","42","45","48"], c: 2 }
+      { q: "Qual número completa a sequência: 3, 6, 12, 24, ...?", a: ["36", "40", "42", "48"], c: 3 },
+      { q: "25% de 360:", a: ["70", "80", "85", "90"], c: 1 },
+      { q: "Se x = 5, quanto vale 3x + 2?", a: ["12", "15", "17", "20"], c: 2 },
+      { q: "Raiz quadrada de 225:", a: ["13", "14", "15", "16"], c: 2 },
+      { q: "Quanto é 2³ (2 ao cubo)?", a: ["6", "7", "8", "9"], c: 2 }
     ],
     [
-      { q: "Quanto é 13²?", a: ["156","165","169","172"], c: 2 },
-      { q: "Raiz quadrada de 144:", a: ["10","11","12","13"], c: 2 },
-      { q: "Quanto é 18 × 12?", a: ["206","214","216","224"], c: 2 },
-      { q: "50% de 478:", a: ["236","238","239","241"], c: 2 },
-      { q: "Quanto é 1000 ÷ 25?", a: ["35","38","40","42"], c: 2 }
+      { q: "Qual número completa a sequência: 12, 15, 21, 30, ...?", a: ["35", "36", "42", "45"], c: 2 },
+      { q: "55% de 200:", a: ["100", "110", "120", "130"], c: 1 },
+      { q: "Área de um quadrado de lado 6:", a: ["26", "30", "32", "36"], c: 3 },
+      { q: "Raiz cúbica de 64:", a: ["3", "4", "5", "6"], c: 1 },
+      { q: "Valor de π aproximado:", a: ["3.1", "3.14", "3.4", "3.5"], c: 1 }
     ],
     [
-      { q: "Quanto é 17 × 19?", a: ["313","319","323","327"], c: 2 },
-      { q: "Raiz cúbica de 125:", a: ["3","4","5","6"], c: 2 },
-      { q: "35% de 600:", a: ["200","205","210","215"], c: 2 },
-      { q: "Quanto é 23²?", a: ["527","529","531","533"], c: 1 },
-      { q: "Quanto é 2⁵ (2^5)?", a: ["28","30","32","34"], c: 2 }
+      { q: "Qual número completa a sequência: 4, 9, 16, 25, ...?", a: ["30", "35", "36", "40"], c: 2 },
+      { q: "30% de 900:", a: ["200", "250", "260", "270"], c: 3 },
+      { q: "Quanto é 12²?", a: ["124", "144", "154", "164"], c: 1 },
+      { q: "Raiz quadrada de 361:", a: ["17", "18", "19", "20"], c: 2 },
+      { q: "Qual é o próximo primo após 23?", a: ["25", "27", "29", "31"], c: 2 }
     ],
     [
-      { q: "Quanto é 37 × 43?", a: ["1587","1589","1591","1593"], c: 2 },
-      { q: "Raiz quadrada de 289:", a: ["15","16","17","18"], c: 2 },
-      { q: "75% de 840:", a: ["620","625","630","635"], c: 2 },
-      { q: "Quanto é 3⁴ (3^4)?", a: ["79","81","83","85"], c: 1 },
-      { q: "Quanto é 1728 ÷ 12?", a: ["142","144","146","148"], c: 1 }
+      { q: "Qual número completa a sequência: 7, 14, 28, 56, ...?", a: ["80", "98", "100", "112"], c: 1 },
+      { q: "60% de 750:", a: ["430", "440", "450", "460"], c: 2 },
+      { q: "Valor de 9³:", a: ["729", "739", "749", "759"], c: 0 },
+      { q: "Raiz quadrada de 625:", a: ["23", "24", "25", "26"], c: 2 },
+      { q: "Quanto é 3⁵?", a: ["210", "240", "243", "250"], c: 2 }
     ],
     [
-      { q: "Quanto é 47 × 53?", a: ["2487","2489","2491","2493"], c: 2 },
-      { q: "Raiz quadrada de 529:", a: ["21","22","23","24"], c: 2 },
-      { q: "Quanto é 15% de 2400?", a: ["350","355","360","365"], c: 2 },
-      { q: "Quanto é 11³ (11^3)?", a: ["1329","1331","1333","1335"], c: 1 },
-      { q: "Quanto é 5⁵ (5^5)?", a: ["3123","3125","3127","3129"], c: 1 }
+      { q: "Próximo termo: 11, 22, 44, 88, ...", a: ["132", "144", "160", "176"], c: 0 },
+      { q: "75% de 3200:", a: ["2200", "2300", "2400", "2500"], c: 2 },
+      { q: "Valor de 6⁴:", a: ["1180", "1296", "1340", "1390"], c: 1 },
+      { q: "Raiz quadrada de 1024:", a: ["30", "31", "32", "33"], c: 2 },
+      { q: "Qual é o próximo primo após 47?", a: ["49", "51", "53", "55"], c: 2 }
     ],
     [
-      { q: "Quanto é 89 × 97?", a: ["8631","8633","8635","8637"], c: 1 },
-      { q: "Raiz quadrada de 841:", a: ["27","28","29","30"], c: 2 },
-      { q: "125% de 480:", a: ["590","595","600","605"], c: 2 },
-      { q: "Quanto é 13³ (13^3)?", a: ["2195","2197","2199","2201"], c: 1 },
-      { q: "Quanto é 2¹⁰ (2^10)?", a: ["1020","1022","1024","1026"], c: 2 }
+      { q: "Qual número completa a sequência: 15, 30, 60, 120, ...?", a: ["180", "200", "220", "240"], c: 3 },
+      { q: "40% de 4800:", a: ["1800", "1900", "1920", "2000"], c: 2 },
+      { q: "Valor de 14³:", a: ["2680", "2690", "2744", "2800"], c: 2 },
+      { q: "Raiz quadrada de 1600:", a: ["35", "38", "40", "42"], c: 2 },
+      { q: "Quanto é 5⁶?", a: ["12500", "15000", "15625", "16000"], c: 2 }
     ],
     [
-      { q: "Quanto é 127 × 131?", a: ["16635","16637","16639","16641"], c: 1 },
-      { q: "Raiz quadrada de 1296:", a: ["34","35","36","37"], c: 2 },
-      { q: "37.5% de 1600:", a: ["590","595","600","605"], c: 2 },
-      { q: "Quanto é 17³ (17^3)?", a: ["4911","4913","4915","4917"], c: 1 },
-      { q: "Quanto é 7⁴ (7^4)?", a: ["2399","2401","2403","2405"], c: 1 }
+      { q: "Próximo termo: 21, 42, 84, 168, ...", a: ["260", "300", "320", "336"], c: 3 },
+      { q: "37.5% de 2400:", a: ["850", "875", "900", "925"], c: 2 },
+      { q: "Valor de 18³:", a: ["5832", "5890", "5950", "6000"], c: 0 },
+      { q: "Raiz quadrada de 2025:", a: ["41", "44", "45", "47"], c: 2 },
+      { q: "Valor de 7⁵:", a: ["16000", "16807", "17000", "17500"], c: 1 }
     ]
   ]
 };
 
-// Sequências globais que persistem entre os jogos
 let globalSequences = {
   general: [],
   math: []
 };
 
-// Posições atuais nas sequências globais (persiste entre jogos)
 let globalPositions = {
   general: new Array(10).fill(0),
   math: new Array(10).fill(0)
@@ -191,7 +189,6 @@ let gameState = {
   selectedTheme: null
 };
 
-// Inicializa as sequências globais embaralhadas UMA VEZ quando o site carrega
 function initGlobalSequences() {
   ['general', 'math'].forEach(theme => {
     globalSequences[theme] = QUESTIONS[theme].map(levelQuestions => {
@@ -200,7 +197,6 @@ function initGlobalSequences() {
   });
 }
 
-// Chama apenas uma vez quando o script carrega
 initGlobalSequences();
 
 function initGame() {
@@ -300,16 +296,12 @@ function prepareQuestion() {
   const level = gameState.currentQuestionIndex;
   const theme = gameState.selectedTheme;
   
-  // Pega a sequência global para este nível e tema
   const sequence = globalSequences[theme][level];
   
-  // Pega a posição atual na sequência global
   const position = globalPositions[theme][level];
   
-  // Seleciona a pergunta na posição atual
   gameState.currentQuestionData = sequence[position];
   
-  // Avança a posição global (com wraparound circular)
   globalPositions[theme][level] = (position + 1) % sequence.length;
 }
 

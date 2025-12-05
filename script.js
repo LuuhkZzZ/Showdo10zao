@@ -16,7 +16,8 @@ const elements = {
   resultIcon: document.getElementById('resultIcon'),
   resultTitle: document.getElementById('resultTitle'),
   skipBtn: document.getElementById('skipBtn'),
-  eliminateBtn: document.getElementById('eliminateBtn')
+  eliminateBtn: document.getElementById('eliminateBtn'),
+  confettiContainer: document.getElementById('confettiContainer')
 };
 
 const REWARDS = [0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 5, 10];
@@ -32,10 +33,10 @@ const QUESTIONS = {
     ],
     [
       { q: "Quem é o protagonista de 'The Witcher'?", a: ["Geralt", "Ezio", "Link", "Kratos"], c: 0 },
-      { q: "A cantora Billie Eilish é de qual país?", a: ["Reino Unido", "EUA", "Austrália", "Canadá"], c: 1 },
+      { q: "A cantora Billie Eilish é de qual país?", a: ["Reino Unido", "Estados Unidos", "Austrália", "Canadá"], c: 1 },
       { q: "Em qual continente fica o Egito?", a: ["Ásia", "Europa", "África", "Oceania"], c: 2 },
       { q: "Metal mais utilizado na construção civil:", a: ["Alumínio", "Ferro", "Chumbo", "Níquel"], c: 1 },
-      { q: "Qual a cor principal da bandeira da Itália?", a: ["Azul", "Verde", "Amarelo", "Preto"], c: 1 }
+      { q: "Qual a primeira cor da bandeira da Itália?", a: ["Azul", "Verde", "Amarelo", "Preto"], c: 1 }
     ],
     [
       { q: "Em Star Wars, o sabre de Luke é de qual cor?", a: ["Vermelho", "Azul", "Roxo", "Amarelo"], c: 1 },
@@ -49,7 +50,7 @@ const QUESTIONS = {
       { q: "A série 'Breaking Bad' gira em torno da produção de:", a: ["Vacinas", "Computadores", "Drogas", "Armas"], c: 2 },
       { q: "Primeiro metal usado pela humanidade:", a: ["Ferro", "Ouro", "Bronze", "Cobre"], c: 3 },
       { q: "Qual país inventou o sushi?", a: ["China", "Japão", "Coreia", "Tailândia"], c: 1 },
-      { q: "Água congela a:", a: ["0°C", "10°C", "5°C", "2°C"], c: 0 }
+      { q: "A água congela a:", a: ["0°C", "10°C", "5°C", "2°C"], c: 0 }
     ],
     [
       { q: "O jogo 'The Last of Us' gira em torno de um fungo chamado:", a: ["Cordyceps", "Aurora", "Mycena", "Scarlet"], c: 0 },
@@ -73,11 +74,11 @@ const QUESTIONS = {
       { q: "Ano de criação da ONU:", a: ["1940", "1945", "1950", "1955"], c: 1 }
     ],
     [
-      { q: "Qual desses é um jogo soulslike?", a: ["Hades", "Dark Souls", "Overwatch", "Valorant"], c: 1 },
+      { q: "Qual desses é um jogo 'soulslike'?", a: ["Hades", "Elden Ring", "Overwatch", "Valorant"], c: 1 },
       { q: "A série 'Arcane' é baseada em qual jogo?", a: ["Valorant", "Dota", "League of Legends", "Fortnite"], c: 2 },
       { q: "Maior país do mundo em área:", a: ["China", "Rússia", "Canadá", "Brasil"], c: 1 },
-      { q: "Velocidade da rotação da Terra aprox.:", a: ["1.600 km/h", "500 km/h", "900 km/h", "3.200 km/h"], c: 0 },
-      { q: "Primeira lei de Newton trata de:", a: ["Inércia", "Gravidade", "Ação e reação", "Pressão"], c: 0 }
+      { q: "Velocidade da rotação da Terra aproximadamente:", a: ["1.600 km/h", "500 km/h", "900 km/h", "3.200 km/h"], c: 0 },
+      { q: "A primeira lei de Newton trata de:", a: ["Inércia", "Gravidade", "Ação e reação", "Pressão"], c: 0 }
     ],
     [
       { q: "Em 'One Piece', qual é o sonho do Luffy?", a: ["Ser rei dos piratas", "Encontrar ouro", "Derrotar a Marinha", "Viajar o mundo"], c: 0 },
@@ -207,7 +208,10 @@ function initGame() {
 function setupEventListeners() {
   document.getElementById('startBtn').onclick = showThemeSelection;
   document.getElementById('retryBtn').onclick = showThemeSelection;
-  document.getElementById('menuBtn').onclick = () => switchScreen(screens.end, screens.menu);
+  document.getElementById('menuBtn').onclick = () => {
+    clearConfetti();
+    switchScreen(screens.end, screens.menu);
+  };
   document.getElementById('backToMenuBtn').onclick = () => switchScreen(screens.theme, screens.menu);
   
   document.querySelectorAll('.theme-btn').forEach(btn => {
@@ -243,6 +247,7 @@ function switchScreen(from, to) {
 }
 
 function showThemeSelection() {
+  clearConfetti();
   switchScreen(screens.menu.classList.contains('active') ? screens.menu : screens.end, screens.theme);
 }
 
@@ -432,6 +437,34 @@ function eliminateWrongOptions() {
   });
 }
 
+function createConfetti() {
+  const colors = ['#8b5cf6', '#6366f1', '#ec4899', '#f59e0b', '#10b981', '#3b82f6', '#ef4444', '#eab308'];
+  const shapes = ['square', 'circle', 'triangle', 'rectangle'];
+  
+  for (let i = 0; i < 150; i++) {
+    setTimeout(() => {
+      const confetti = document.createElement('div');
+      confetti.classList.add('confetti', shapes[Math.floor(Math.random() * shapes.length)]);
+      
+      const color = colors[Math.floor(Math.random() * colors.length)];
+      confetti.style.backgroundColor = color;
+      confetti.style.borderBottomColor = color;
+      
+      confetti.style.left = Math.random() * 100 + '%';
+      confetti.style.animationDuration = (Math.random() * 2 + 2) + 's';
+      confetti.style.animationDelay = (Math.random() * 0.5) + 's';
+      
+      elements.confettiContainer.appendChild(confetti);
+      
+      setTimeout(() => confetti.remove(), 4000);
+    }, i * 30);
+  }
+}
+
+function clearConfetti() {
+  elements.confettiContainer.innerHTML = '';
+}
+
 function endGame(won) {
   elements.earned.textContent = `R$ ${gameState.earnedMoney.toFixed(2)}`;
   
@@ -454,6 +487,14 @@ function endGame(won) {
   
   elements.resultIcon.textContent = msg.icon;
   elements.resultTitle.textContent = msg.text[Math.floor(Math.random() * msg.text.length)];
+  
+  if (won) {
+    createConfetti();
+    const earnedDisplay = document.querySelector('.earned-display');
+    if (earnedDisplay) {
+      earnedDisplay.classList.add('victory-glow');
+    }
+  }
   
   switchScreen(screens.quiz, screens.end);
 }
